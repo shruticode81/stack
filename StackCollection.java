@@ -7,6 +7,9 @@ public class StackCollection {
             stack.push(arr[i]);
         }
         while(!stack.isEmpty()){
+            //peek() is just like top()--> it returns top value in stack
+            //push() and pop() are same
+            System.out.print(stack.peek()+" ");
             System.out.println(stack.pop());
         }
     }
