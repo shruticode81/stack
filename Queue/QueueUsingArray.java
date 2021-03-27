@@ -33,13 +33,24 @@ public class QueueUsingArray {
         if(size==0){
             front=0;
         }
-        rear++;
+        
         size++;
+        //circular queue concet when rear becomes equal to data.length
+        //and there is still space in queue
+        // if(rear==data.length){
+        //     rear=0;
+        // }
+        rear = (rear+1)%data.length;
+        //rear++;
         data[rear]= element;
     }
     public int dequeue(){
         int temp = data[front];
-        front++;
+       // front++;
+       front = (front+1)%data.length;
+    //    if(front==data.length){
+    //        front=0;
+    //    }
         size--;
         if(size==0){
             //reset front and rear to -1
